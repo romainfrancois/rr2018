@@ -1,43 +1,44 @@
 ---
-title: "Instructions pour les auteurs"
-author: "A. Auteur a and B. Auteur b"
+title: "ergo: interface entre R et Go"
+author: "Romain François"
 output: pdf_document
 ---
 
-a Département de Mathématiques
+purrple.cat
 
-A-Institut
+Cowork'in 
 
-A-Adresse
+4 rue Auguste Comte
 
-```author1@institut.com```
+34000 Montpellier
 
-b Département de Biologie
+```romain@purrple.cat```
 
-B-Institut
+Mots clefs : Programmation, Performance, Concurrence, Parallelisme. 
 
-B-Adresse
+R nous fournit un langage solide et flexible pour la pratique de la Data Science. 
+Les projets comme reticulate [1] et Rcpp [2] ont établi qu'il peut être avantageux 
+de coupler R avec un autre langage de programmation. Il est parfois question de 
+performance, d'expressivité algorithmique ou simplement d'accès à des 
+librairies existantes dans ces langages tiers. 
 
-```author2@institut.com```
+Go [3]  est un langage de programmation open source qui facilite
+la création de logiciels simples, efficaces et robustes. Go est un langage simple et 
+élégant, sa librairie standard est extremement riche. Go intègre nativement 
+la programmation en concurrence permettant par exemple l'éxécution de code 
+en parallèle. Le générateur de site hugo et la plate forme de conteneurisation docker
+sont des exemples de logiciels populaires et puissants implémentés en Go. 
 
-Mots clefs : Statistique, Biologie, Régression.
-
-
-Ecrire votre résumé ici.
-
-La longueur du résumé ne doit pas excéder 2 pages. Le résumé doit contenir
-
-1. le titre de la présentation,
-
-2. les noms des auteurs,
-
-3. les mots clefs,
-
-4. Les contacts des auteurs, incluant l’adresse postale et l’email.
-
-Des modèles Word, LibreOffice, LaTeX et RMarkdown pour la préparation des résumés sont disponibles sur le site web de la conférence. Une fois que le résumé est prêt, merci de le convertir en format PDF. Les autres types de fichiers ne seront pas acceptés. Chaque résumé devra être soumis en version électronique via le site web de la conférence.
+ergo est le mariage heureux entre R et Go, permettant l'invocation de code 
+Go depuis un package R. ergo est en quelques sort un Rcpp pour Go, même si 
+l'implémentation est radicalement différente. Nous passerons en revue les choix 
+techniques mis en oeuvre pour le developpement du package ergo, quelques cas
+d'utilisation de Go dans un package R via ergo. 
 
 ## Références
-[1] Liquet, B., Saracco, J. (2011). A criterion for selecting the number of slices and the dimension of the model in SIR and SAVE approaches. To appear in Computational Statistics.
+[1] JJ Allaire, Kevin Ushey and Yuan Tang (2018). reticulate: Interface to 'Python'. R package version 1.6.
 
-[2] Liquet, B., Saracco, J. (2008). Application of the bootstrap approach to the choice of dimension and the $\alpha$ parameter in the SIR$_\alpha$ method. Communications in Statistics - Simulation and Computation, 37(6), 1198-121
+[2] Dirk Eddelbuettel and Romain Francois (2011). Rcpp: Seamless R and C++ Integration. Journal of Statistical Software, 40(8),
+  1-18. URL http://www.jstatsoft.org/v40/i08/
+  
+[3] The Go Programming Language (https://golang.org). 
